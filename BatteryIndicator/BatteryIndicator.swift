@@ -36,10 +36,10 @@ class BatteryIndicator: UIView {
 	var warning = UIColor.yellow
 	var low = UIColor.red
 	
-	var healthyMin: Double = 45
-	var warningMin: Double = 15
+	var healthyMin: Double = 50
+	var warningMin: Double = 10
 	
-	var precentCharged: Double = 100 {
+	var precentCharged: Double = 0 {
 		willSet {
 			if newValue > 100 || newValue < 1 { return }
 			let width = (bounds.size.width - terminalWidth)
@@ -78,6 +78,7 @@ class BatteryIndicator: UIView {
 		indicatorClip.clipsToBounds = true
 		addSubview(indicatorClip)
 		indicatorClip.layer.addSublayer(chargeIndicator)
+		chargeIndicator.frame = CGRect(x: 0, y: 0, width: 0, height: bounds.size.height)
 		layer.addSublayer(topLayer)
 		layer.addSublayer(bottomLayer)
 		layer.addSublayer(batteryTerminal)
@@ -97,7 +98,9 @@ class BatteryIndicator: UIView {
 		indicatorClip.layer.cornerRadius = cornerRadius
 		indicatorClip.frame = CGRect(x: 0, y: 0, width: bounds.size.width - terminalWidth, height: bounds.size.height)
 		
-		chargeIndicator.frame = CGRect(x: 0, y: 0, width: 0, height: bounds.size.height)
+		//Force redraw of indicator
+		let n = precentCharged
+		precentCharged = n
 	}
 	
 	private func style(layer: CAShapeLayer) {
