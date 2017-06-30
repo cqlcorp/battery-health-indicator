@@ -24,23 +24,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="srQ-RV-P1l" customClass="BatteryIndicator" customModule="BatteryIndicator" customModuleProvider="target">
-                                <rect key="frame" x="46.5" y="286.5" width="281" height="93.5"/>
+                                <rect key="frame" x="46.5" y="203.5" width="281" height="93.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="srQ-RV-P1l" secondAttribute="height" multiplier="15:5" id="Jfw-2X-fEG"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jj5-AK-3XH">
+                                <rect key="frame" x="128" y="387" width="118" height="46"/>
+                                <color key="backgroundColor" red="0.050980392159999999" green="0.41176470590000003" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jj5-AK-3XH" secondAttribute="height" multiplier="59:23" id="m6z-gq-eWp"/>
+                                    <constraint firstAttribute="width" constant="118" id="o8l-zP-2AI"/>
+                                </constraints>
+                                <state key="normal" title="Update">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hVN-3c-bRs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="srQ-RV-P1l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1KR-Z5-kXx"/>
+                            <constraint firstItem="jj5-AK-3XH" firstAttribute="top" secondItem="srQ-RV-P1l" secondAttribute="bottom" constant="90" id="4EF-RQ-oDG"/>
+                            <constraint firstItem="jj5-AK-3XH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pbf-Vs-3K5"/>
                             <constraint firstItem="srQ-RV-P1l" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="sPo-LQ-YWt"/>
-                            <constraint firstItem="srQ-RV-P1l" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zLi-89-n55"/>
+                            <constraint firstItem="srQ-RV-P1l" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.75" id="zLi-89-n55"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="batterIndicator" destination="srQ-RV-P1l" id="P3T-3J-w7V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

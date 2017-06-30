@@ -24,11 +24,22 @@ class BatteryIndicator: UIView {
 	var warning = UIColor.yellow
 	var low = UIColor.red
 	
-	var precentCharged: CGFloat = 100 {
+	var healthyMin: Double = 45
+	var warningMin: Double = 15
+	
+	var precentCharged: Double = 100 {
 		willSet {
+			if newValue > 100 || newValue < 1 { return }
 			let width = (bounds.size.width - terminalWidth)
-			let chargedWidth = (newValue / 100) * width
+			let chargedWidth = CGFloat((newValue / 100) * Double(width))
 			chargeIndicator.frame = CGRect(x: 0, y: 0, width: chargedWidth, height: bounds.size.height)
+			if newValue < healthyMin && newValue >= warningMin {
+				chargeIndicator.backgroundColor = warning.cgColor
+			} else if newValue < warningMin {
+				chargeIndicator.backgroundColor = low.cgColor
+			} else {
+				chargeIndicator.backgroundColor = healthy.cgColor
+			}
 		}
 	}
 	
@@ -77,7 +88,7 @@ class BatteryIndicator: UIView {
 		indicatorClip.frame = CGRect(x: 0, y: 0, width: bounds.size.width - terminalWidth, height: bounds.size.height)
 		
 		chargeIndicator.backgroundColor = healthy.cgColor
-		precentCharged = 67
+		precentCharged = 12
 	}
 	
 	private func drawTopLayer(midY: CGFloat, endX: CGFloat) {
