@@ -14,8 +14,9 @@ class ViewController: UIViewController {
 	
 	
 	override func viewDidLoad() {
-		super.viewDidLoad()		
-		// Do any additional setup after loading the view, typically from a nib.
+		super.viewDidLoad()
+		batterIndicator.precentCharged = 32
+		batterIndicator.animatedReveal = true
 	}
 
 	override func didReceiveMemoryWarning() {
