@@ -17,7 +17,7 @@ class BatteryIndicator: UIView {
 	private let batteryTerminal = CALayer()
 	
 	var batteryColor = UIColor.black
-	private var terminalWidth: CGFloat = 7
+	private var terminalWidth: CGFloat = 0.0
 	
 	var animatedReveal = false {
 		willSet {
