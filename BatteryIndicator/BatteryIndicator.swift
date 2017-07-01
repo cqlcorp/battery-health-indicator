@@ -17,7 +17,7 @@ class BatteryIndicator: UIView {
 	private let batteryTerminal = CALayer()
 	
 	var batteryColor = UIColor.black
-	var terminalWidth: CGFloat = 7
+	private var terminalWidth: CGFloat = 7
 	
 	var animatedReveal = false {
 		willSet {
@@ -108,6 +108,7 @@ class BatteryIndicator: UIView {
 	
 	private func drawLayers() {
 		let midY = bounds.size.height / 2
+		terminalWidth = bounds.size.width * 0.025
 		let endX = bounds.size.width - terminalWidth
 		
 		drawTopLayer(midY: midY, endX: endX)
