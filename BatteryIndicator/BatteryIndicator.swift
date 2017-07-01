@@ -10,14 +10,25 @@ import UIKit
 
 class BatteryIndicator: UIView {
 	
+	
+	//MARK: - width of positive batter terminal (will be sized to 2.5% of bounds.size.width)
+	private var terminalWidth: CGFloat = 0.0
+	
+	//MARK: - top layer is the layer used to draw the top/left outline of the battery icon
 	private let topLayer = CAShapeLayer()
+	
+	//MARK: - bottom layer is the layer used to draw the bottom/right outline of the battery icon
 	private let bottomLayer = CAShapeLayer()
+	
+	//MARK: - charge indicator shows how much battery is left
 	private let chargeIndicator = CALayer()
+	
 	private let indicatorClip = UIView()
 	private let batteryTerminal = CALayer()
 	
+	
+	//Set the battery color to update the icon outline and terminal stroke/background color
 	var batteryColor = UIColor.black
-	var terminalWidth: CGFloat = 7
 	
 	var animatedReveal = false {
 		willSet {
@@ -108,6 +119,7 @@ class BatteryIndicator: UIView {
 	
 	private func drawLayers() {
 		let midY = bounds.size.height / 2
+		terminalWidth = bounds.size.width * 0.025
 		let endX = bounds.size.width - terminalWidth
 		
 		drawTopLayer(midY: midY, endX: endX)
