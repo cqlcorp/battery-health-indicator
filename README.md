@@ -3,7 +3,7 @@ A simple battery health indicator component for iOS
 
 | Battery Health Indicator | About |
 |:-------------------:|:------|
-| ![battery-health-indicator-demo](https://user-images.githubusercontent.com/5419021/27763212-fd0155ae-5e4c-11e7-8089-122eae167a88.gif) | An iOS component that can be used to present the current health or charge level remaining in a batter/chargable source/etc.
+| ![battery-health-indicator-demo](https://user-images.githubusercontent.com/5419021/27763212-fd0155ae-5e4c-11e7-8089-122eae167a88.gif) | An iOS component that can be used to present the current health or charge level remaining in a battery, chargable entity, etc.
 
 ---
 
