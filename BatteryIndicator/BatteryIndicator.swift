@@ -10,8 +10,6 @@ import UIKit
 
 class BatteryIndicator: UIView {
 	
-	private let terminalWidth: CGFloat = 10
-	
 	private let topLayer = CAShapeLayer()
 	private let bottomLayer = CAShapeLayer()
 	private let chargeIndicator = CALayer()
@@ -19,6 +17,7 @@ class BatteryIndicator: UIView {
 	private let batteryTerminal = CALayer()
 	
 	var batteryColor = UIColor.black
+	var terminalWidth: CGFloat = 7
 	
 	var animatedReveal = false {
 		willSet {
@@ -167,7 +166,7 @@ class BatteryIndicator: UIView {
 		let fade = CABasicAnimation(keyPath: "opacity")
 		fade.fromValue = 0.0
 		fade.toValue = 1.0
-		fade.duration = 0.8		
+		fade.duration = 0.8
 		fade.fillMode = kCAFillModeForwards
 		fade.isRemovedOnCompletion = false
 		batteryTerminal.add(fade, forKey: nil)
