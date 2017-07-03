@@ -1,0 +1,6 @@
+framework module Pods_BatteryIndicatorTests {
+  umbrella header "Pods-BatteryIndicatorTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

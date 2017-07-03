@@ -1,0 +1,6 @@
+framework module Pods_BatteryIndicator {
+  umbrella header "Pods-BatteryIndicator-umbrella.h"
+
+  export *
+  module * { export * }
+}
