@@ -12,7 +12,6 @@
 		1FB0251F1F06CF7800AFC797 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FB0251D1F06CF7800AFC797 /* Main.storyboard */; };
 		1FB025211F06CF7800AFC797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FB025201F06CF7800AFC797 /* Assets.xcassets */; };
 		1FB025241F06CF7800AFC797 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FB025221F06CF7800AFC797 /* LaunchScreen.storyboard */; };
-		1FB0252C1F06CF9200AFC797 /* BatteryIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB0252B1F06CF9200AFC797 /* BatteryIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +22,6 @@
 		1FB025201F06CF7800AFC797 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FB025231F06CF7800AFC797 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FB025251F06CF7800AFC797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1FB0252B1F06CF9200AFC797 /* BatteryIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +60,6 @@
 				1FB025201F06CF7800AFC797 /* Assets.xcassets */,
 				1FB025221F06CF7800AFC797 /* LaunchScreen.storyboard */,
 				1FB025251F06CF7800AFC797 /* Info.plist */,
-				1FB0252B1F06CF9200AFC797 /* BatteryIndicator.swift */,
 			);
 			path = BatteryIndicator;
 			sourceTree = "<group>";
@@ -140,7 +137,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FB0252C1F06CF9200AFC797 /* BatteryIndicator.swift in Sources */,
 				1FB0251C1F06CF7800AFC797 /* ViewController.swift in Sources */,
 				1FB0251A1F06CF7800AFC797 /* AppDelegate.swift in Sources */,
 			);
@@ -304,6 +300,7 @@
 				1FB0252A1F06CF7800AFC797 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
